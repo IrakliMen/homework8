@@ -1,8 +1,10 @@
+/* task 1 */
 .title1 {
     font-size: 40px;
     font-weight: 900;
     color: #4e4e4e;
     text-align: center;
+    margin-block: 20px;
 }
 .divButton {
     width: 500px;
@@ -26,4 +28,166 @@
 .button1:active {
     box-shadow: 5px 5px 5px black inset, -3px -3px 3px white inset;
     font-size: 32px;
+}
+/* task 2 */
+.cardContainer {
+    width: 400px;
+    margin: auto;
+    padding: 30px;
+    transition: all 1s;
+}
+.puppy {
+    width: 100%;
+    height: 100%;
+    transition: all 1s;
+}
+.cardContainer:hover {
+    border-radius: 40px;
+    box-shadow: 0px 0px 5px #91c891, 0px 0px 10px #91c891, 0px 0px 20px #91c891, 0px 0px 30px #91c891;
+}
+.cardContainer:hover .puppy {
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+}
+.task2p {
+    color: #0a8000;
+    margin-top: 5px;
+    font-family: Italic;
+}
+/* task 3 */
+.title2 {
+    font-size: 140px;
+    letter-spacing: 20px;
+    text-align: center;
+    /* animation: lighting .5s infinite linear; */
+    animation: lighting  0.5s infinite linear;
+}
+@keyframes lighting {
+    0% {
+        color: black;
+    }
+    100% {
+        color: rgb(12, 156, 108);
+    }
+}
+/* task 4 */
+.spinnerContainer {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    position: relative;
+}
+.spinnerText {
+    font-size: 40px;
+    font-weight: 700;
+    position: absolute;
+}
+.spinner {
+    width: 100%;
+    height: 100%;
+    border-top: 30px solid green;
+    border-right: 30px solid green;
+    border-bottom: 30px solid yellow;
+    border-left: 30px solid red;
+    border-radius: 50%;
+    animation: spin 2s infinite linear;
+}
+@keyframes spin {
+    0% {
+        rotate: 0deg;
+    }
+    100% {
+        rotate: 360deg;
+    }
+}
+.spinner:hover {
+    animation-play-state: paused;
+}
+/* task 5 */
+.navigation {
+    width: 700px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    background-color: #056462;
+}
+ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+a {
+    color: #faebd7;
+    font-size: 40px;
+    font-weight: 400;
+    text-shadow: 4px 4px 4px black;
+    transition: text-shadow 1s linear;
+}
+a:hover {
+    text-shadow: 0px 0px 5px #A5247F,
+    0px 0px 10px #A5247F,
+    0px 0px 20px #A5247F,
+    0px 0px 30px #A5247F;
+}
+/* task 6 */
+.container {
+    width: 700px;
+    height: 300px;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    background-color: black;
+    margin-bottom: 100px;
+}
+.center {
+    margin: auto;
+}
+.loading {
+    color: black;
+    animation: flashing 1s 7  linear;
+}
+@keyframes flashing {
+    50% {
+        color: white;
+    }
+    100% {
+        color: black;
+    }
+}
+.buffer {
+    width: 500px;
+    height: 30px;
+    border: 3px solid #ffffff;
+    margin-block: 8px;
+    padding: 3px;
+}
+.bufferLoad {
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    animation: load 7s linear;
+}
+@keyframes load {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+.complete {
+    /* color: white; */
+    text-align: right;
+    animation: complete 0s 7s 1 linear forwards;
+}
+@keyframes complete {
+    0% {
+        color: black;
+    }
+    100% {
+        color: #ffffff;
+    }
 }
